@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VideoDemo</string>
+    <item type="id" name="tag_inner_entity" />
 </resources>
