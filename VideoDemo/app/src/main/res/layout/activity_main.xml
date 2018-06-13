@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="barray.widget.video.MainActivity">
-
-    <VideoView
-        android:id="@+id/vv_player"
+    <TextView
+        android:text="视频播放的三种方式"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="系统播放器"
+        android:onClick="systemPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="VideoView 播放"
+        android:onClick="videoViewPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
