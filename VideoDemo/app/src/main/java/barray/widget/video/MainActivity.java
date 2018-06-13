@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 
 import barray.widget.video.task.CopyVideoTask;
+import barray.widget.video.ui.MediaPlayerActivity;
 import barray.widget.video.ui.VideoViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
         copyVideoTask.execute("");
     }
 
+
+    /**
+     * MediaPlayer 播放
+     * @param view
+     */
+    public void mediaPlayer(View view){
+        if(videoPath == null) return;
+        Intent intent = new Intent(this, MediaPlayerActivity.class);
+        intent.putExtra("videoPath",videoPath);
+        startActivity(intent);
+    }
+
+
     /**
      * 系统播放器
      *
@@ -58,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("videoPath",videoPath);
         startActivity(intent);
     }
+
+
 
 
 
